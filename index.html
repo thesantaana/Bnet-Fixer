@@ -157,7 +157,7 @@
             <div class="flex flex-col md:flex-row justify-between items-end mb-8 max-w-4xl mx-auto">
                 <div>
                     <h2 class="text-3xl font-bold text-white mb-2">查看源代码</h2>
-                    <p class="text-gray-400">我们要做到公开透明。运行前请随意检查脚本内容。</p>
+                    <p class="text-gray-400">脚本内容。</p>
                 </div>
                 <div class="mt-4 md:mt-0">
                     <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-900/30 text-green-400 border border-green-800">
@@ -342,7 +342,7 @@ exit /b</code></pre>
                         <p class="mb-2"><strong>原因：</strong> 战网进程仍在运行或被杀毒软件锁定。</p>
                         <ul class="list-disc pl-5 space-y-1">
                             <li>重启电脑。</li>
-                            <li>开机后**不要打开任何软件**。</li>
+                            <li>开机后不要打开任何软件。</li>
                             <li>暂时关闭杀毒软件（如 360、火绒、迈克菲等）。</li>
                             <li>立即再次运行脚本。</li>
                         </ul>
@@ -372,6 +372,19 @@ exit /b</code></pre>
                         <p>请按 <code>Win + R</code>，输入 <code>services.msc</code>，并查找 "Secondary Logon"。如果缺失，您可能需要重装完整版 Windows 系统才能玩暴雪游戏。</p>
                     </div>
                 </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-700 rounded-lg bg-[#1c222b] overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(4)">
+                        <span class="font-semibold text-white">附：魔法可登录但是无法进入游戏，且其他软件也出现了类似的网络问题？</span>
+                        <i id="icon-4" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="answer-4" class="hidden px-6 py-4 text-gray-400 border-t border-gray-700 bg-gray-800/50">
+                        <p class="mb-2"><strong>原因：</strong> 可能是驱动的问题。</p>
+                        <p class="mb-2">建议下载驱动检测安装程序更新自身电脑网卡驱动。</p>
+                        <a href="https://www.drivergenius.com/" target="_blank" class="text-bnet-blue hover:text-bnet-blueHover underline">前往下载驱动精灵 (drivergenius.com)</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -381,7 +394,7 @@ exit /b</code></pre>
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-400 mb-4">&copy; 2026 thesantaana. 保留所有权利。</p>
             <div class="flex justify-center items-center space-x-6 mb-6">
-                <a href="#" class="flex items-center gap-2 text-gray-500 hover:text-white transition-colors">
+                <a href="https://github.com/thesantaana/Bnet-Fixer" class="flex items-center gap-2 text-gray-500 hover:text-white transition-colors">
                     <i class="fa-brands fa-github text-xl"></i> <span>GitHub 仓库</span>
                 </a>
                 <span class="text-gray-600">|</span>

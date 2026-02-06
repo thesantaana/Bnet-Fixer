@@ -2,7 +2,7 @@
 One-click fix for Battle.net installation agent errors for cn server.
 
 
-本工具旨在解决战网安装失败、卡更新、以及无法启动的问题（特别是错误代码 `BLZBNTBTS0000005D`）。它通过“清理残留”和“修复环境”两个维度进行深度修复。
+本工具旨在解决战网安装失败、卡更新(agent 45%)、以及无法启动的问题。它通过“清理残留”和“修复环境”两个维度进行深度修复。
 
 **核心功能模块：**
 

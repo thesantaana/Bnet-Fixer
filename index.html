@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>战网修复工具</title>
+    <meta name="description" content="为 Windows 10/11 打造的自动清理与网络重置工具">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚑</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
+        <!-- Background Gradient/Effect -->
+        <div class="absolute inset-0 bg-gradient-to-b from-bnet-dark via-[#1a202c] to-bnet-dark opacity-80 z-[-1]"></div>
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMyZDM3NDgiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] z-[-1]"></div>
+
+        <div class="max-w-4xl mx-auto z-10 animate-fade-in-up">
+            <div class="mb-6">
+                <i class="fa-solid fa-tools text-6xl text-bnet-blue mb-4"></i>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-white">
+                一键修复战网错误</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                为 Windows 10/11 打造的自动清理与网络重置工具。
+            </p>
+            
+            <div class="flex flex-col items-center">
+                <a href="Fix_BattleNet.zip" class="glow-button bg-bnet-blue hover:bg-bnet-blueHover text-white font-bold py-4 px-10 rounded-full text-xl flex items-center gap-3">
+                    <i class="fa-solid fa-download"></i> 下载修复工具
+                </a>
+                <p class="mt-4 text-sm text-gray-500">
+                    <i class="fa-brands fa-github mr-1"></i> 开源项目 (MIT 协议) | <i class="fa-solid fa-shield-halved mr-1"></i> 安全透明
+                </p>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 animate-bounce">
+            <a href="#features" class="text-gray-500 hover:text-white transition-colors">
+                <i class="fa-solid fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-[#1c222b]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">为什么选择此工具？</h2>
+                <div class="w-20 h-1 bg-bnet-blue mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Card 1 -->
+                <div class="bg-bnet-dark p-8 rounded-xl border border-gray-800 hover:border-bnet-blue transition-colors duration-300 shadow-lg group">
+                    <div class="w-16 h-16 bg-red-900/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-skull text-3xl text-red-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">进程查杀</h3>
+                    <p class="text-gray-400">自动检测并强制结束所有暴雪相关的后台僵尸进程（如 Agent.exe），防止因文件占用导致修复失败。</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-bnet-dark p-8 rounded-xl border border-gray-800 hover:border-bnet-blue transition-colors duration-300 shadow-lg group">
+                    <div class="w-16 h-16 bg-blue-900/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-trash-can text-3xl text-bnet-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">深度清理</h3>
+                    <p class="text-gray-400">彻底清除 ProgramData、AppData 及注册表中导致安装错误的残留数据。</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-bnet-dark p-8 rounded-xl border border-gray-800 hover:border-bnet-blue transition-colors duration-300 shadow-lg group">
+                    <div class="w-16 h-16 bg-green-900/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-wrench text-3xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">服务修复</h3>
+                    <p class="text-gray-400">修复关键的 Secondary Logon 服务，并重置 Winsock 和 DNS 以解决网络连接问题。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Guide -->
+    <section class="py-20 bg-bnet-dark relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">使用指南</h2>
+                <p class="text-gray-400">简单五步，助您重返游戏。</p>
+            </div>
+
+            <div class="relative max-w-6xl mx-auto">
+                <!-- Connector Line -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-800 -translate-y-1/2 z-0"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center text-center px-2">
+                        <div class="w-16 h-16 bg-[#1c222b] border-4 border-bnet-blue rounded-full flex items-center justify-center text-xl font-bold text-white mb-4 shadow-xl">1</div>
+                        <h3 class="text-lg font-bold text-white mb-2">下载</h3>
+                        <p class="text-sm text-gray-400">下载 <span class="font-mono text-bnet-blue">FixBnet.bat</span> 工具（ZIP压缩包）。</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center text-center px-2">
+                        <div class="w-16 h-16 bg-[#1c222b] border-4 border-bnet-blue rounded-full flex items-center justify-center text-xl font-bold text-white mb-4 shadow-xl">2</div>
+                        <h3 class="text-lg font-bold text-white mb-2">解压</h3>
+                        <p class="text-sm text-gray-400">右键压缩包，选择 <strong class="text-white">“解压缩”</strong> 提取文件。</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center text-center px-2">
+                        <div class="w-16 h-16 bg-[#1c222b] border-4 border-bnet-blue rounded-full flex items-center justify-center text-xl font-bold text-white mb-4 shadow-xl">3</div>
+                        <h3 class="text-lg font-bold text-white mb-2">管理员运行</h3>
+                        <p class="text-sm text-gray-400">右键点击bat文件，选择 <strong class="text-white">“以管理员身份运行”</strong>。</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex flex-col items-center text-center px-2">
+                        <div class="w-16 h-16 bg-[#1c222b] border-4 border-bnet-blue rounded-full flex items-center justify-center text-xl font-bold text-white mb-4 shadow-xl">4</div>
+                        <h3 class="text-lg font-bold text-white mb-2">确认执行</h3>
+                        <p class="text-sm text-gray-400">输入 <span class="font-mono text-green-400">'y'</span> 并按回车键开始清理。</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="flex flex-col items-center text-center px-2">
+                        <div class="w-16 h-16 bg-[#1c222b] border-4 border-bnet-blue rounded-full flex items-center justify-center text-xl font-bold text-white mb-4 shadow-xl">5</div>
+                        <h3 class="text-lg font-bold text-white mb-2">重启生效</h3>
+                        <p class="text-sm text-gray-400">等待工具自动重启电脑以应用更改。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparency / Source Code -->
+    <section class="py-20 bg-[#1c222b]">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-8 max-w-4xl mx-auto">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2">查看源代码</h2>
+                    <p class="text-gray-400">我们要做到公开透明。运行前请随意检查脚本内容。</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-900/30 text-green-400 border border-green-800">
+                        <i class="fa-solid fa-check mr-2"></i> 安全认证
+                    </span>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-[#0d1117] rounded-lg overflow-hidden border border-gray-700 shadow-2xl">
+                <div class="flex items-center justify-between px-4 py-2 bg-[#161b22] border-b border-gray-700">
+                    <span class="text-xs text-gray-400 font-mono">FixBnet.bat</span>
+                    <div class="flex gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                </div>
+                <div class="p-4 overflow-x-auto h-96">
+                    <pre class="text-sm font-mono text-gray-300 leading-relaxed"><code>@echo off
+setlocal EnableDelayedExpansion
+
+:: ========================================================
+:: 1. AUTO-ELEVATE TO ADMIN
+:: ========================================================
+>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+if '%errorlevel%' NEQ '0' (
+    echo Requesting Administrator rights...
+    goto UACPrompt
+) else ( goto gotAdmin )
+
+:UACPrompt
+    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
+    echo UAC.ShellExecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs"
+    "%temp%\getadmin.vbs"
+    exit /B
+
+:gotAdmin
+    if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )
+    pushd "%CD%"
+    CD /D "%~dp0"
+
+cls
+echo ========================================================
+echo   Battle.net Repair Tool (Diagnostic Edition)
+echo ========================================================
+echo.
+echo   Actions to be performed:
+echo   1. Kill Battle.net processes
+echo   2. Deep Clean Cache (with Error Reporting)
+echo   3. Reset Network & Enable Secondary Logon Service
+echo.
+
+:: ========================================================
+:: 2. START CONFIRMATION
+:: ========================================================
+:AskStart
+set /p UserInput=Would you like to run this script now? (y/n): 
+if /i "%UserInput%"=="n" exit
+if /i "%UserInput%" NEQ "y" goto AskStart
+echo.
+
+:: ========================================================
+:: STEP 1: KILL PROCESSES
+:: ========================================================
+echo [1/3] Killing Processes...
+taskkill /f /im Battle.net.exe >nul 2>&1
+taskkill /f /im Agent.exe >nul 2>&1
+taskkill /f /im "Battle.net Launcher.exe" >nul 2>&1
+taskkill /f /im "Blizzard Battle.net App.exe" >nul 2>&1
+echo       Status: [Done] (If running, they are now closed)
+echo.
+
+:: ========================================================
+:: STEP 2: DELETE CACHE (With Error Checks)
+:: ========================================================
+echo [2/3] Deleting Cache Files...
+
+:: Stop Agent Service first
+net stop "Battle.net Update Agent" >nul 2>&1
+
+:: Function to delete and check errors
+call :SafeDelete "%ProgramData%\Battle.net"
+call :SafeDelete "%ProgramData%\Blizzard Entertainment"
+call :SafeDelete "%AppData%\Battle.net"
+call :SafeDelete "%LocalAppData%\Battle.net"
+call :SafeDelete "%LocalAppData%\Blizzard Entertainment"
+
+:: Registry Clean
+reg delete "HKEY_CURRENT_USER\Software\Blizzard Entertainment" /f >nul 2>&1
+if %errorlevel% NEQ 0 (
+    echo       [Registry] Warning: Could not delete registry key (or key not found).
+) else (
+    echo       [Registry] Cleaned.
+)
+echo.
+
+:: ========================================================
+:: STEP 3: NETWORK & SERVICE FIX
+:: ========================================================
+echo [3/3] Resetting Network & Services...
+
+:: Fix Secondary Logon
+sc config seclogon start= auto >nul 2>&1
+if %errorlevel% NEQ 0 (
+    echo       [Error] Could not configure 'Secondary Logon' service.
+    echo               Reason: Access Denied or Service Disabled by Policy.
+) else (
+    net start seclogon >nul 2>&1
+    echo       [Service] Secondary Logon set to Auto.
+)
+
+:: Network Resets
+ipconfig /flushdns >nul 2>&1
+netsh int ip reset >nul 2>&1
+if %errorlevel% NEQ 0 echo       [Network] TCP/IP Reset failed (Check Group Policy).
+netsh winsock reset >nul 2>&1
+if %errorlevel% NEQ 0 echo       [Network] Winsock Reset failed.
+
+echo       Status: [Done]
+echo.
+
+:: ========================================================
+:: END CONFIRMATION & RESTART
+:: ========================================================
+echo ========================================================
+echo                  REPAIR COMPLETE
+echo ========================================================
+echo.
+
+:AskRestart
+set /p RestartInput=Would you like to RESTART your computer now? (y/n): 
+if /i "%RestartInput%"=="y" (
+    echo.
+    echo Restarting in 3 seconds...
+    shutdown /r /t 3
+    exit
+)
+if /i "%RestartInput%"=="n" (
+    echo.
+    echo [IMPORTANT] Please remember to RESTART MANUALLY later.
+    echo Press any key to exit...
+    pause >nul
+    exit
+)
+goto AskRestart
+
+:: ========================================================
+:: SUB-ROUTINE: Safe Delete Helper
+:: ========================================================
+:SafeDelete
+if exist "%~1" (
+    rd /s /q "%~1" >nul 2>&1
+    if exist "%~1" (
+        echo       [!] FAILED to delete: "%~1"
+        echo           Reason: Files are in use or Access Denied.
+    ) else (
+        echo       [OK] Deleted: "%~1"
+    )
+)
+exit /b</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-bnet-dark">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">常见问题与故障排查</h2>
+                <p class="text-gray-400">常见错误及其解决方案。</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-700 rounded-lg bg-[#1c222b] overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(1)">
+                        <span class="font-semibold text-white">无法删除文件 (Failed to delete files)？</span>
+                        <i id="icon-1" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="answer-1" class="hidden px-6 py-4 text-gray-400 border-t border-gray-700 bg-gray-800/50">
+                        <p class="mb-2"><strong>原因：</strong> 战网进程仍在运行或被杀毒软件锁定。</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>重启电脑。</li>
+                            <li>开机后**不要打开任何软件**。</li>
+                            <li>暂时关闭杀毒软件（如 360、火绒、迈克菲等）。</li>
+                            <li>立即再次运行脚本。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-700 rounded-lg bg-[#1c222b] overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(2)">
+                        <span class="font-semibold text-white">拒绝访问 / 需要管理员权限 (Access Denied)？</span>
+                        <i id="icon-2" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="answer-2" class="hidden px-6 py-4 text-gray-400 border-t border-gray-700 bg-gray-800/50">
+                        <p class="mb-2"><strong>原因：</strong> 权限不足。</p>
+                        <p>请务必右键点击脚本并选择 <strong>“以管理员身份运行”</strong>。这是停止服务和修改注册表所必需的。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-700 rounded-lg bg-[#1c222b] overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(3)">
+                        <span class="font-semibold text-white">Secondary Logon 服务错误？</span>
+                        <i id="icon-3" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="answer-3" class="hidden px-6 py-4 text-gray-400 border-t border-gray-700 bg-gray-800/50">
+                        <p class="mb-2"><strong>原因：</strong> 您的 Windows 可能是精简版（Ghost版），该服务被移除了。</p>
+                        <p>请按 <code>Win + R</code>，输入 <code>services.msc</code>，并查找 "Secondary Logon"。如果缺失，您可能需要重装完整版 Windows 系统才能玩暴雪游戏。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-[#0d1117] border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400 mb-4">&copy; 2026 thesantaana. 保留所有权利。</p>
+            <div class="flex justify-center items-center space-x-6 mb-6">
+                <a href="#" class="flex items-center gap-2 text-gray-500 hover:text-white transition-colors">
+                    <i class="fa-brands fa-github text-xl"></i> <span>GitHub 仓库</span>
+                </a>
+                <span class="text-gray-600">|</span>
+                <span class="flex items-center gap-2 text-gray-500">
+                    <i class="fa-solid fa-scale-balanced"></i> <span>MIT 协议</span>
+                </span>
+            </div>
+            <p class="text-xs text-gray-600 max-w-2xl mx-auto">
+                免责声明：本工具与暴雪娱乐 (Blizzard Entertainment) 无关。使用风险自负。
+                “Battle.net”和“Blizzard”是暴雪娱乐公司的商标或注册商标。
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
